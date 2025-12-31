@@ -135,7 +135,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           placement="left"
           onClose={() => setDrawerVisible(false)}
           open={drawerVisible}
-          bodyStyle={{ padding: 0, background: '#001529' }}
+          styles={{ 
+            body: {
+              padding: 0, 
+              background: '#001529' 
+            }
+          }}
           width={250}
         >
           {siderContent}
