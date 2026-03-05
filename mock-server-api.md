@@ -9,8 +9,8 @@ http://localhost:8000
 
 ### 请求参数
 
-请求路径: /admin-api/ms-user/auth/login
-请求body:
+- 路由：POST `/admin-api/ms-user/auth/login`
+- 报文：
 
 ```json
 {
@@ -21,9 +21,7 @@ http://localhost:8000
 
 ### 响应
 
-正常响应结果：
-
-HTTP 200 ，示例响应内容：
+HTTP 状态码 `200` ，正常响应示例：
 
 ```json
 {
@@ -40,8 +38,7 @@ HTTP 200 ，示例响应内容：
 }
 ```
 
-异常：
-如果 email 或者 password 错误，则返回以下异常。
+（如 `email` 或者 `password` 错误等场景）异常响应示例： 
 
 ```json
 {
@@ -57,19 +54,13 @@ HTTP 200 ，示例响应内容：
 
 ## 文章
 
-请求路径如下：
-
-列表： GET /admin-api/ms-content/article?
-
-获取特定id文章： GET /admin-api/ms-content/article/{id}  # 其中 `{id}` 为数字，后同
-
-创建： POST /admin-api/ms-content/article
-
-更新特定id文章： POST/PUT /admin-api/ms-content/article/{id}
-
-删除特定id文章： DELETE /admin-api/ms-content/article/{id} 
-
-
+| 路由         | URI                                           | 备注                 |
+|------------|-----------------------------------------------|--------------------|
+| 文章列表       | GET `/admin-api/ms-content/article?`          |                    |
+| 获取特定 id 文章 | GET `/admin-api/ms-content/article/{id}`      | # 其中 `{id}` 为数字，后同 |
+| 创建文章       | POST `/admin-api/ms-content/article`          |                    |
+| 更新特定 id 文章 | POST/PUT `/admin-api/ms-content/article/{id}` |                    |
+| 删除特定 id 文章 | DELETE `/admin-api/ms-content/article/{id}`   |                    |
 
 ### 文章列表
 
@@ -78,8 +69,8 @@ HTTP 200 ，示例响应内容：
 - page int 当前第几页
 - per_page int 每页分页大小
 - keyword string 关键词搜索
-- category_id int 分类id
-- status string 状态 one of ('draft' | 'published' | 'archived')
+- category_id int 分类 id
+- status string 状态，取后面枚举值其一  `('draft' | 'published' | 'archived')`
 
 
 ```json
@@ -128,7 +119,7 @@ HTTP 200 ，示例响应内容：
 
 ### 创建文章
 
-请求 body 
+请求报文：
 
 ```json
 {
@@ -139,9 +130,7 @@ HTTP 200 ，示例响应内容：
 }
 ```
 
-正常返回响应
-
-HTTP 状态码 201
+HTTP 状态码 `201` ，正常返回响应：
 
 ```json
 {
@@ -195,21 +184,15 @@ HTTP 状态码 201
 
 略去不表。
 
-
 ## 分类
 
-请求路径如下：
-
-
-获取所有分类： GET /admin-api/ms-content/category/all
-
-获取特定id分类： GET /admin-api/ms-content/category/{id}  # 其中 `{id}` 为数字，后同
-
-创建： POST /admin-api/ms-content/category
-
-更新特定id分类： POST/PUT /admin-api/ms-content/category/{id}
-
-删除特定id分类： DELETE /admin-api/ms-content/category/{id} 
+| 路由         | URI                                            | 备注                 |
+|------------|------------------------------------------------|--------------------|
+| 获取所有分类     | GET `/admin-api/ms-content/category/all`       | 分类数量有限，故获取全部       |
+| 获取特定 id 分类 | GET `/admin-api/ms-content/category/{id}`      | # 其中 `{id}` 为数字，后同 |
+| 创建分类       | POST `/admin-api/ms-content/category`          |                    |
+| 更新特定 id 分类 | POST/PUT `/admin-api/ms-content/category/{id}` |                    |
+| 删除特定 id 分类 | DELETE `/admin-api/ms-content/category/{id}`   |                    |
 
 分类的实体结构如下：
 
@@ -267,23 +250,18 @@ HTTP 状态码 201
 
 ## 用户
 
-请求路径如下：
-
-当前登录用户： GET /admin-api/ms-user/user/me
-
-用户列表： GET /admin-api/ms-user/user
-
-获取特定id用户： GET /admin-api/ms-user/user/{id}  # 其中 `{id}` 为数字，后同
-
-创建： POST /admin-api/ms-user/user
-
-更新特定id分类： POST/PUT /admin-api/ms-user/user/{id}
-
-删除特定id分类： DELETE /admin-api/ms-user/user/{id} 
+| 路由         | URI                                     | 备注                 |
+|------------|-----------------------------------------|--------------------|
+| 当前登录用户     | GET `/admin-api/ms-user/auth/me`        |                    |
+| 用户列表       | GET `/admin-api/ms-user/user`           |                    |
+| 获取特定 id 用户 | GET `/admin-api/ms-user/user/{id}`      | # 其中 `{id}` 为数字，后同 |
+| 创建用户       | POST `/admin-api/ms-user/user`          |                    |
+| 更新特定 id 用户 | POST/PUT `/admin-api/ms-user/user/{id}` |                    |
+| 删除特定 id 用户 | DELETE `/admin-api/ms-user/user/{id}`   |                    | 
 
 ### 当前用户接口
 
-GET /admin-api/ms-user/auth/me
+GET `/admin-api/ms-user/auth/me`
 
 响应示例：
 
@@ -303,7 +281,7 @@ GET /admin-api/ms-user/auth/me
 
 ### 用户列表接口
 
-GET /admin-api/ms-user/user
+GET `/admin-api/ms-user/user`
 
 ```json
 {
