@@ -25,5 +25,5 @@ export const authService = {
     api.post<ApiResponse<LoginResponse>, ApiResponse<LoginResponse>>('/ms-user/auth/login', data),
   
   getCurrentUser: () => 
-    api.get<ApiResponse<LoginResponse>, ApiResponse<LoginResponse>>('/ms-user/user/me'),
+    api.get<ApiResponse<LoginResponse>, ApiResponse<LoginResponse>>('/ms-user/me'),
 }

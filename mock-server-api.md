@@ -1,6 +1,10 @@
 模拟数据接口说明文档
 ------------------
 
+## 实现
+
+这里有个基于 [flightphp](https://docs.flightphp.com/en/v3/) 框架的实现 —— [php-mock-flight-server](https://github.com/ycrao/php-mock-flight-server.git) ，搭配它可以展示完整交互页面。
+
 ## 基地址
 
 http://localhost:8000
@@ -252,7 +256,7 @@ HTTP 状态码 `201` ，正常返回响应：
 
 | 路由         | URI                                     | 备注                 |
 |------------|-----------------------------------------|--------------------|
-| 当前登录用户     | GET `/admin-api/ms-user/auth/me`        |                    |
+| 当前登录用户     | GET `/admin-api/ms-user/me`             |                    |
 | 用户列表       | GET `/admin-api/ms-user/user`           |                    |
 | 获取特定 id 用户 | GET `/admin-api/ms-user/user/{id}`      | # 其中 `{id}` 为数字，后同 |
 | 创建用户       | POST `/admin-api/ms-user/user`          |                    |

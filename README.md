@@ -1,6 +1,6 @@
 # Admin Dashboard
 
-基于 React + TypeScript + Vite + Ant Design 构建的现代化后台管理系统。
+基于 `React + TypeScript + Vite + Ant Design` 构建的现代化后台管理系统。
 
 ## 功能特性
 
@@ -42,6 +42,18 @@ pnpm dev
 
 访问 http://localhost:3000
 
+### 启动 mock 后端服务器
+
+参考这个仓库部署：[php-mock-flight-server](https://github.com/ycrao/php-mock-flight-server) 。
+
+```bash
+git clone https://github.com/ycrao/php-mock-flight-server.git
+cd php-mock-flight-server
+composer install -vvv
+cp -r app/config/config_sample.php app/config/config.php
+composer start
+```
+
 ### 构建生产版本
 
 ```bash
@@ -59,6 +71,18 @@ pnpm preview
 ```bash
 pnpm lint
 ```
+
+### 截图
+
+![login](assets/login.png)
+
+![article](assets/article.png)
+
+![edit-markdown-article](assets/edit-markdown-article.png)
+
+![en-article](assets/en-article.png)
+
+![category](assets/category.png)
 
 ## 项目结构
 
