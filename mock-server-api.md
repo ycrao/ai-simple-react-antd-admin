@@ -126,7 +126,7 @@ HTTP 状态码 `200` ，正常响应示例：
     "title": "adjourn",
     "content": "Arbor vinitor bibo. Benevolentia contabesco minus delibero uberrime umquam vitae. Alias decretum nulla capio curto certe cresco cuius patior celebrer.",
     "excerpt": "Temeritas vinco sumo enim.",
-    "category_id": 1, 
+    "category_id": 1
 }
 ```
 
