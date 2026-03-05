@@ -283,7 +283,7 @@ HTTP 状态码 201
 
 ### 当前用户接口
 
-GET /admin-api/ms-user/user/me
+GET /admin-api/ms-user/auth/me
 
 响应示例：
 
@@ -303,7 +303,7 @@ GET /admin-api/ms-user/user/me
 
 ### 用户列表接口
 
-GET /admin-api/ms-user/user/me
+GET /admin-api/ms-user/user
 
 ```json
 {
