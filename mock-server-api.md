@@ -265,7 +265,7 @@ HTTP 状态码 `201` ，正常返回响应：
 
 ### 当前用户接口
 
-GET `/admin-api/ms-user/auth/me`
+GET `/admin-api/ms-user/me`
 
 响应示例：
 
