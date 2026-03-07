@@ -61,7 +61,7 @@
     "category": "分类",
     "selectCategory": "选择分类",
     "selectStatus": "选择状态",
-    "searchTitle": "搜索标题",
+    "searchTitle": "搜索标题或内容",
     "draft": "草稿",
     "published": "已发布",
     "archived": "已归档",
@@ -76,7 +76,8 @@
     "titleRequired": "请输入标题",
     "categoryRequired": "请选择分类",
     "excerptRequired": "请输入摘要",
-    "contentRequired": "请输入内容"
+    "contentRequired": "请输入内容",
+    "statusRequired": "请选择状态"
   },
   "categories": {
     "title": "分类管理",

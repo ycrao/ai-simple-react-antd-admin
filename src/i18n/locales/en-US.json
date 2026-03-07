@@ -61,7 +61,7 @@
     "category": "Category",
     "selectCategory": "Select Category",
     "selectStatus": "Select Status",
-    "searchTitle": "Search Title",
+    "searchTitle": "Search title or content",
     "draft": "Draft",
     "published": "Published",
     "archived": "Archived",
@@ -76,7 +76,8 @@
     "titleRequired": "Please enter title",
     "categoryRequired": "Please select category",
     "excerptRequired": "Please enter excerpt",
-    "contentRequired": "Please enter content"
+    "contentRequired": "Please enter content",
+    "statusRequired": "Please select status"
   },
   "categories": {
     "title": "Category Management",

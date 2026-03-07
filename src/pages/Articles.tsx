@@ -307,6 +307,19 @@ const Articles: React.FC = () => {
           </Form.Item>
 
           <Form.Item
+            name="status"
+            label={t('common.status')}
+            initialValue="draft"
+            rules={[{ required: true, message: t('articles.statusRequired') }]}
+          >
+            <Select>
+              <Select.Option value="draft">{t('articles.draft')}</Select.Option>
+              <Select.Option value="published">{t('articles.published')}</Select.Option>
+              <Select.Option value="archived">{t('articles.archived')}</Select.Option>
+            </Select>
+          </Form.Item>
+
+          <Form.Item
             label={t('articles.content')}
             required
           >
